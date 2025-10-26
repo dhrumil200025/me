@@ -4,30 +4,125 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Dhrumil Patel — Introduction</title>
+  <meta name="description" content="Introduction website for Dhrumil Patel — BE in IT, fresher, sports and movies enthusiast." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E👋%3C/text%3E%3C/svg%3E">
+  <meta property="og:title" content="Dhrumil Patel — Introduction" />
+  <meta property="og:description" content="BE in IT | Fresher | Loves sports & movies" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://<your-username>.github.io/me/" />
   <style>
-    body { font-family: system-ui, Arial, sans-serif; margin: 2rem; line-height: 1.6; }
-    .card { max-width: 720px; margin: auto; padding: 2rem; border: 1px solid #eee; border-radius: 16px; box-shadow: 0 6px 24px rgba(0,0,0,.06); }
-    h1 { margin-top: 0; }
-    .tag { display: inline-block; padding: .25rem .6rem; border: 1px solid #ddd; border-radius: 999px; margin-right: .5rem; font-size: .9rem; }
-    a { color: #0366d6; text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    :root{
+      --bg: #ffffff; --fg:#111827; --muted:#6b7280; --card:#ffffff; --border:#e5e7eb; --link:#2563eb;
+      --chip:#f3f4f6;
+    }
+    @media (prefers-color-scheme: dark){
+      :root{
+        --bg:#0b0f14; --fg:#e5e7eb; --muted:#9aa3af; --card:#0f141b; --border:#1f2937; --link:#60a5fa; --chip:#111827;
+      }
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji";}
+    a{color:var(--link);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:900px;margin:0 auto;padding:32px 20px}
+    header{display:flex;align-items:center;gap:18px;margin-bottom:28px}
+    .avatar{width:64px;height:64px;border-radius:50%;display:grid;place-items:center;background:var(--chip);border:1px solid var(--border);font-size:32px}
+    .title h1{margin:0;font-size:1.8rem}
+    .title p{margin:.25rem 0 0;color:var(--muted)}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:22px;margin:16px 0;box-shadow:0 6px 24px rgba(0,0,0,.06)}
+    h2{margin:.2rem 0 1rem;font-size:1.2rem}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    @media (max-width:720px){.grid{grid-template-columns:1fr}}
+    .chips{display:flex;flex-wrap:wrap;gap:8px}
+    .chip{background:var(--chip);border:1px solid var(--border);padding:.25rem .6rem;border-radius:999px;font-size:.9rem}
+    .btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}
+    .btn{display:inline-block;border:1px solid var(--border);background:var(--card);padding:.6rem .9rem;border-radius:12px}
+    .btn.primary{background:var(--link);color:#fff;border-color:transparent}
+    footer{margin-top:24px;color:var(--muted);font-size:.9rem}
+    /* subtle focus */
+    :focus-visible{outline:2px solid var(--link);outline-offset:2px;border-radius:6px}
   </style>
 </head>
 <body>
-  <main class="card">
-    <h1>Hello, I’m Dhrumil 👋</h1>
-    <p><strong>Education:</strong> BE in IT</p>
-    <p><strong>Experience:</strong> Fresher (eager to learn!)</p>
-    <p><strong>Hobbies:</strong> <span class="tag">Sports</span> <span class="tag">Watching movies</span></p>
+  <div class="wrap">
+    <header>
+      <div class="avatar" aria-hidden="true">👋</div>
+      <div class="title">
+        <h1>Dhrumil Patel</h1>
+        <p>BE in Information Technology • Fresher • Sports & Movies Enthusiast</p>
+      </div>
+    </header>
 
-    <h2>About This Site</h2>
-    <p>This is my introductions website for the “Building Your First Website with GitHub Pages” assignment.</p>
+    <section class="card" aria-labelledby="about">
+      <h2 id="about">About Me</h2>
+      <p>
+        I’m Dhrumil Patel, an aspiring software developer with a
+        <strong>Bachelor of Engineering in Information Technology</strong>.
+        I’m currently a <strong>fresher</strong> and excited to build real-world projects,
+        sharpen my problem-solving skills, and collaborate with peers.
+      </p>
+      <div class="btns">
+        <a class="btn primary" href="mailto:DhrumilkumarShital@lewisu.edu">Email Me</a>
+        <a class="btn" href="https://<your-username>.github.io/me/">Visit Site URL</a>
+      </div>
+    </section>
 
-    <h2>Contact</h2>
-    <p>
-      Email: <a href="mailto:you@example.com">you@example.com</a><br/>
-      LinkedIn: <a href="#">Add your link</a> (optional)
-    </p>
-  </main>
+    <section class="grid">
+      <div class="card" aria-labelledby="education">
+        <h2 id="education">Education</h2>
+        <p><strong>BE in Information Technology</strong></p>
+        <ul>
+          <li>Core interests: Web technologies, programming fundamentals</li>
+          <li>Goal: Build a strong foundation in modern front-end and back-end tools</li>
+        </ul>
+      </div>
+
+      <div class="card" aria-labelledby="experience">
+        <h2 id="experience">Experience</h2>
+        <p><em>Fresher</em> — building skills through coursework and personal practice.</p>
+        <ul>
+          <li>Comfortable with basic HTML & CSS; exploring JavaScript</li>
+          <li>Interested in version control with Git & GitHub</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="card" aria-labelledby="hobbies">
+        <h2 id="hobbies">Hobbies & Interests</h2>
+        <div class="chips" role="list" aria-label="Hobby tags">
+          <span class="chip" role="listitem">Cricket</span>
+          <span class="chip" role="listitem">Badminton</span>
+          <span class="chip" role="listitem">Watching Movies</span>
+          <span class="chip" role="listitem">Teamwork & Discipline</span>
+        </div>
+      </div>
+
+      <div class="card" aria-labelledby="goals">
+        <h2 id="goals">Goals</h2>
+        <ul>
+          <li>Short-term: strengthen HTML, CSS, and JavaScript fundamentals</li>
+          <li>Long-term: contribute to useful, user-friendly software</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card" aria-labelledby="contact">
+      <h2 id="contact">Contact</h2>
+      <p>Email: <a href="mailto:DhrumilkumarShital@lewisu.edu">DhrumilkumarShital@lewisu.edu</a></p>
+      <!-- Optional: add your LinkedIn or GitHub profile links when ready -->
+      <!-- <p>LinkedIn: <a href="#">Add your link</a></p> -->
+      <!-- <p>GitHub: <a href="https://github.com/<your-username>">github.com/<your-username></a></p> -->
+    </section>
+
+    <footer>
+      © <span id="year"></span> Dhrumil Patel • Built with GitHub Pages
+    </footer>
+  </div>
+
+  <script>
+    // Auto-update footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
